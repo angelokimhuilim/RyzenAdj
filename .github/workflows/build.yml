@@ -1,7 +1,10 @@
 name: Build Package
 on:
-  push:
-  pull_request:
+  # push:
+  # pull_request:
+
+  # trigger workflow manually to prevent clutter in every changes.
+  workflow_dispatch
 
 jobs:
   Windows:
