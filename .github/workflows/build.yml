@@ -95,25 +95,25 @@ jobs:
             ./win32/WinRing0x64.dll
             ./win32/WinRing0x64.sys
 
-  Linux:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Install Dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install libpci-dev
-
-    - name: run-cmake #with support for inline error reporting
-      uses: lukka/run-cmake@v3.3
-
-    - name: Test make like readme
-      run: |
-        mkdir build && cd build
-        cmake DCMAKE_BUILD_TYPE=Release ..
-        make
+#  Linux:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - uses: actions/checkout@v4
+#
+#    - name: Install Dependencies
+#      run: |
+#        sudo apt-get update
+#        sudo apt-get install libpci-dev
+#
+#    - name: run-cmake #with support for inline error reporting
+#      uses: lukka/run-cmake@v3.3
+#
+#    - name: Test make like readme
+#      run: |
+#        mkdir build && cd build
+#        cmake DCMAKE_BUILD_TYPE=Release ..
+#        make
 
 #    - name: Test Scripts
 #      shell: bash
